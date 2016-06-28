@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Lot::Documentcatalog do
+describe Lot::DocumentCatalog do
   it 'has a version number' do
-    expect(Lot::Documentcatalog::VERSION).not_to be nil
+    expect(Lot::DocumentCatalog::VERSION).not_to be nil
   end
 
   it 'does something useful' do

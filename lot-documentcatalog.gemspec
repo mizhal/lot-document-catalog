@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'lot/documentcatalog/version'
+require 'lot/document_catalog/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "lot-documentcatalog"
-  spec.version       = Lot::Documentcatalog::VERSION
+  spec.version       = Lot::DocumentCatalog::VERSION
   spec.authors       = ["mizhal"]
   spec.email         = ["mizhal@gmail.com"]
 
