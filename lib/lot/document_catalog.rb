@@ -1,6 +1,7 @@
 require "mongoid"
 
 require "lot/document_catalog/version"
+require "lot/document_catalog/connection"
 
 require "lot/document_catalog/twitter_raw_protocol/twitter_raw_protocol"
 
@@ -14,9 +15,15 @@ module Lot
     class << self
       attr_accessor :config
 
+      private 
+
       def get_conf
         @config ||= Config.new
         @config
+      end
+
+      def has_conf?
+        @config.present?
       end
 
       def initialize_mongoid

@@ -3,4 +3,9 @@ test:
     default:
       database: document_catalog_test
       hosts:
-        - localhost:27017
+        - localhost:27019
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
+        connect_timeout: 1
