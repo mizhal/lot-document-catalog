@@ -15,14 +15,22 @@ module Lot
 
         expect(Connection.connected?).to be true
 
-        # prev = TwitterRawProtocol::CapturedProfile.count 
-        
-        # profile = TwitterRawProtocol::CapturedProfile.new
-        # expect(profile.save).to be true
-        # expect(TwitterRawProtocol::CapturedProfile.count).to be prev + 1
-
-        # profile.destroy
       end
+
+      it "exposes collections as catalogs to upper layers" do
+        ## The intention here is to simulate dependency injection.
+        ## Instead of linking classes directly by their names, upper layers
+        ## are given an object which contains the references to classes with a 
+        ## previously stablished name
+        ## This way, if we need to change document models or names, upper layers won't
+        ## be affected, as long as we respect the collection interface.
+
+        ## objects contanining class references are called "catalogs" 
+
+        expect(TwitterRawProtocol.catalog.TwitterLink).to be TwitterRawProtocol::TwitterLink
+
+      end
+
     end
   end
 end

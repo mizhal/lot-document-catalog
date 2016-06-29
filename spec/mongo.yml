@@ -3,7 +3,7 @@ test:
     default:
       database: document_catalog_test
       hosts:
-        - localhost:27019
+        - localhost:27017
       options:
         read:
           mode: :primary

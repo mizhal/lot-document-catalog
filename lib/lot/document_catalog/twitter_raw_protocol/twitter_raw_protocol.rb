@@ -4,7 +4,18 @@ require_relative "twitter_link"
 
 module Lot
   module DocumentCatalog
-  	module TwitterRawProtocol
-  	end
+    module TwitterRawProtocol
+      class << self
+        
+        def catalog
+          @catalog = @catalog || OpenStruct.new(
+            "CapturedProfile" => CapturedProfile,
+            "TwitterLink" =>  TwitterLink,
+            "CapturedTweet" => CapturedTweet
+          )
+        end
+
+      end
+    end
   end
 end
