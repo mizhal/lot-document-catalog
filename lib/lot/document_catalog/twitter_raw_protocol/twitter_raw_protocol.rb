@@ -12,7 +12,8 @@ module Lot
           @catalog = @catalog || OpenStruct.new(
             "CapturedProfile" => CapturedProfile,
             "TwitterLink" =>  TwitterLink,
-            "CapturedTweet" => CapturedTweet
+            "CapturedTweet" => CapturedTweet,
+            "TwitterTarget" => TwitterTarget
           )
         end
 
