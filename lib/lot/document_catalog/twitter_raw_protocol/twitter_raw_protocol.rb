@@ -1,6 +1,7 @@
 require_relative "captured_profile"
 require_relative "captured_tweet"
 require_relative "twitter_link"
+require_relative "twitter_target"
 
 module Lot
   module DocumentCatalog

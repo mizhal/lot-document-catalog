@@ -12,6 +12,8 @@ module Lot
       	field :location
       	field :lang
       	field :timezone
+        field :first_seen
+        field :last_seen
 
       end
     end
